@@ -1,0 +1,25 @@
+storage:
+  type: MYSQL # YAML or MySQL, not case-sensitive
+  sql: # only fill this in if you chose MySQL
+    host: localhost
+    port: 3306
+    database: "ban"
+    user: root
+    password: ''
+    useSSL: false
+
+punishments: # these are the punishments shown in the /b <name>
+  1:
+    type: BAN
+    material: BARRIER
+    title: "§cCheat" # also used for ban reason
+    lore:
+      - "§cBan this user for cheating"
+      - "§cDuration: 3days"
+    time: 3days
+  2:
+    type: KICK
+    material: BARRIER
+    title: "§cPing" # also used for kick reason
+    lore:
+      - "§cKick this user for having a too high ping"

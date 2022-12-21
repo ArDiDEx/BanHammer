@@ -1,0 +1,16 @@
+name: BanHammer
+version: '${version}'
+main: fr.ardidex.banhammer.BanHammer
+api-version: 1.19
+authors: [ ardidex ]
+commands:
+  ban:
+    permission: banhammer.ban
+  unban:
+    permission: banhammer.unban
+  kick:
+    permission: banhammer.kick
+  history:
+    permission: banhammer.history
+  b:
+    permission: banhammer.inventory
