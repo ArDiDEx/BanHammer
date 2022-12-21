@@ -1,6 +1,6 @@
 package fr.ardidex.banhammer.settings;
 
-import fr.ardidex.banhammer.punishments.PunishmentType;
+import fr.ardidex.banhammer.enums.PunishmentType;
 import org.bukkit.Material;
 
 import java.util.List;

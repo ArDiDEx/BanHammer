@@ -1,5 +1,6 @@
 package fr.ardidex.banhammer.punishments;
 
+import fr.ardidex.banhammer.enums.PunishmentType;
 import org.bukkit.Bukkit;
 import org.jetbrains.annotations.Nullable;
 

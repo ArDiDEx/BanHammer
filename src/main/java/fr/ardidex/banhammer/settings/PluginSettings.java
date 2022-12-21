@@ -1,7 +1,9 @@
 package fr.ardidex.banhammer.settings;
 
 import fr.ardidex.banhammer.BanHammer;
-import fr.ardidex.banhammer.punishments.PunishmentType;
+import fr.ardidex.banhammer.enums.PunishmentHandler;
+import fr.ardidex.banhammer.enums.PunishmentType;
+import fr.ardidex.banhammer.enums.StorageType;
 import fr.ardidex.banhammer.utils.TimeUtils;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;

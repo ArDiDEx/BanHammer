@@ -1,7 +1,7 @@
 package fr.ardidex.banhammer.storage;
 
 import fr.ardidex.banhammer.punishments.PunishmentEntry;
-import fr.ardidex.banhammer.punishments.PunishmentType;
+import fr.ardidex.banhammer.enums.PunishmentType;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.CommandSender;
 

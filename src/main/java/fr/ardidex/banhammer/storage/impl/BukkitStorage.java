@@ -4,7 +4,7 @@ import fr.ardidex.banhammer.BanHammer;
 import fr.ardidex.banhammer.exceptions.StorageLoadException;
 import fr.ardidex.banhammer.exceptions.StorageUnLoadException;
 import fr.ardidex.banhammer.punishments.PunishmentEntry;
-import fr.ardidex.banhammer.punishments.PunishmentType;
+import fr.ardidex.banhammer.enums.PunishmentType;
 import fr.ardidex.banhammer.storage.IStorage;
 import org.bukkit.BanEntry;
 import org.bukkit.BanList;

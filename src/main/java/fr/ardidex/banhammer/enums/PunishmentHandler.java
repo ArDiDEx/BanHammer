@@ -1,4 +1,4 @@
-package fr.ardidex.banhammer.settings;
+package fr.ardidex.banhammer.enums;
 
 public enum PunishmentHandler {
     BUKKIT,

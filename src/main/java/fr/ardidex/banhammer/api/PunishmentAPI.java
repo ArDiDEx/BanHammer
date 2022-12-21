@@ -2,7 +2,7 @@ package fr.ardidex.banhammer.api;
 
 import fr.ardidex.banhammer.BanHammer;
 import fr.ardidex.banhammer.punishments.PunishmentEntry;
-import fr.ardidex.banhammer.punishments.PunishmentType;
+import fr.ardidex.banhammer.enums.PunishmentType;
 import fr.ardidex.banhammer.utils.TimeUtils;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.CommandSender;

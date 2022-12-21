@@ -1,4 +1,4 @@
-package fr.ardidex.banhammer.punishments;
+package fr.ardidex.banhammer.enums;
 
 public enum PunishmentType {
     BAN,

@@ -3,7 +3,7 @@ package fr.ardidex.banhammer.storage;
 import fr.ardidex.banhammer.exceptions.StorageLoadException;
 import fr.ardidex.banhammer.exceptions.StorageUnLoadException;
 import fr.ardidex.banhammer.punishments.PunishmentEntry;
-import fr.ardidex.banhammer.punishments.PunishmentType;
+import fr.ardidex.banhammer.enums.PunishmentType;
 import org.bukkit.OfflinePlayer;
 
 import java.util.List;
