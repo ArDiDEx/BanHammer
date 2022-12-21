@@ -6,6 +6,7 @@ import fr.ardidex.banhammer.exceptions.StorageUnLoadException;
 import fr.ardidex.banhammer.punishments.PunishmentEntry;
 import fr.ardidex.banhammer.punishments.PunishmentType;
 import fr.ardidex.banhammer.settings.PluginSettings;
+import fr.ardidex.banhammer.settings.PunishmentHandler;
 import fr.ardidex.banhammer.storage.ICacheStorage;
 import fr.ardidex.banhammer.storage.IStorage;
 import fr.ardidex.banhammer.storage.IStorageManager;
@@ -39,6 +40,11 @@ public class DefaultStorageManager implements IStorageManager {
             plugin.getLogger().severe("Could not load storage: storageType is null!");
             return;
         }
+
+        if (settings.getPunishmentHandler() == PunishmentHandler.BUKKIT) {
+            storage = new BukkitStorage(this.storage);
+        }
+
         storage.initialize();
 
         plugin.getLogger().info("Loading entries from database...");

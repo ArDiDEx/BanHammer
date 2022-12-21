@@ -15,6 +15,7 @@ public class PluginSettings {
     final StorageType storageType;
     final DatabaseAuth auth;
     final List<PredefinedPunishment> predefinedPunishments = new ArrayList<>();
+    final PunishmentHandler punishmentHandler;
     final BanHammer plugin = BanHammer.getInstance();
 
     public PluginSettings() {
@@ -27,10 +28,10 @@ public class PluginSettings {
             BanHammer.getInstance().getLogger().warning("storage type could not be loaded from config (" + type + "). Defaulting to YAML");
         }
 
-        storageType = tempStorageType;
+        this.storageType = tempStorageType;
         ConfigurationSection authSection = config.getConfigurationSection("storage.sql");
         if (authSection == null) {
-            if (storageType.equals(StorageType.MYSQL)) {
+            if (this.storageType.equals(StorageType.MYSQL)) {
                 BanHammer.getInstance().getLogger().warning("Could not find database credentials from config. " +
                         "Default credentials will be used instead.");
             }
@@ -77,9 +78,17 @@ public class PluginSettings {
                     time = TimeUtils.parseTime(section.getString("time"));
                 } catch (Exception ignored) {}
 
-                predefinedPunishments.add(new PredefinedPunishment(punishmentType, material, title, lore, time));
+                this.predefinedPunishments.add(new PredefinedPunishment(punishmentType, material, title, lore, time));
             }
         }
+        PunishmentHandler handler;
+        try{
+            handler = PunishmentHandler.valueOf(config.getString("punishment-system", "BUKKIT").toUpperCase());
+        }catch (IllegalArgumentException e){
+            plugin.getLogger().warning("Could not parse punishment-system from config, defaulting to Bukkit");
+            handler = PunishmentHandler.BUKKIT;
+        }
+        this.punishmentHandler = handler;
 
 
     }
@@ -90,6 +99,10 @@ public class PluginSettings {
 
     public DatabaseAuth getAuth() {
         return auth;
+    }
+
+    public PunishmentHandler getPunishmentHandler() {
+        return punishmentHandler;
     }
 
     public List<PredefinedPunishment> getPredefinedPunishments() {

@@ -7,7 +7,7 @@ storage:
     user: root
     password: ''
     useSSL: false
-
+punishment-system: bukkit # Bukkit or Storage, not case-sensitive; this defines what will manage the bans, 'bukkit' disables the kick history.
 punishments: # these are the punishments shown in the /b <name>
   1:
     type: BAN
